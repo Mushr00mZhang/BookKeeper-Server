@@ -6,7 +6,7 @@ services:
     volumes:
       - /app/FinancialRecord/FinancialRecord.db:/app/FinancialRecord.db
     networks:
-      - bridge
+      - app
 networks:
-  bridge:
+  app:
     external: true
