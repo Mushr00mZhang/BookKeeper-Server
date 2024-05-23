@@ -11,5 +11,5 @@ RUN go build -ldflags="-w -s" -o svc .
 FROM scratch
 WORKDIR /app
 COPY --from=builder /app/svc .
-EXPOSE 80
+EXPOSE 4000
 CMD ["/app/svc"]

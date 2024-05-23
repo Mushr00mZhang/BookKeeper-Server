@@ -2,7 +2,7 @@ services:
   FinancialRecord-Backend:
     image: registry.gitlab.com/financialrecord/backend
     ports:
-      - 4000:80
+      - 4000:4000
     volumes:
       - ./FinancialRecord.db:/app/FinancialRecord.db
 volumes:

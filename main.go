@@ -32,5 +32,5 @@ func main() {
 	controllers.Init(r)
 	r.PathPrefix("").Handler(http.FileServer(http.Dir("./dist")))
 	http.Handle("/", r)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":4000", nil))
 }
