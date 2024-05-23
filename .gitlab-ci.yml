@@ -40,6 +40,6 @@ deploy:
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" >> ~/.ssh/config'
   script:
     - DOCKER_HOST="ssh://${SSH_SERVER_USER}@${SSH_SERVER_IP}"
-    - docker compose -p down
-    - docker compose -p pull -q
-    - docker compose -p up -d
+    - docker compose down
+    - docker compose pull -q
+    - docker compose up -d
