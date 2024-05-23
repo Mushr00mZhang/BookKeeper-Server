@@ -1,4 +1,4 @@
-docker-build:
+build:
   # Use the official docker image.
   image: docker:cli
   stage: build
@@ -40,6 +40,6 @@ deploy:
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" >> ~/.ssh/config'
   script:
     - DOCKER_HOST="ssh://${SSH_SERVER_USER}@${SSH_SERVER_IP}"
-    - docker compose -p bookkeeper down
-    - docker compose -p bookkeeper pull -q
-    - docker compose -p bookkeeper up -d
+    - docker compose -p down
+    - docker compose -p pull -q
+    - docker compose -p up -d

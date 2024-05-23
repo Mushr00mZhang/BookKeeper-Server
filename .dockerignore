@@ -1,5 +1,3 @@
-/compose*.yml
-/.*
-/frontend/node_modules
-/frontend/*lock*
-/frontend/dist
+compose*.yml
+.*
+README.md
