@@ -9,4 +9,5 @@ services:
       - app
 networks:
   app:
+    name: main_app
     external: true
