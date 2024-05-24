@@ -24,7 +24,7 @@ build:
       exists:
         - Dockerfile
       changes:
-        - **/**/*.go
+        - ./**/**/*.go
         - Dockerfile
 deploy:
   image: docker:cli
