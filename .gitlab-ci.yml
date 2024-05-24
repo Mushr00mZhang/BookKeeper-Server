@@ -20,7 +20,7 @@ build:
       fi
   only:
     changes:
-      - **/**/*.go
+      - /**/**/*.go
       - Dockerfile
   # Run this job in a branch where a Dockerfile exists
   rules:
