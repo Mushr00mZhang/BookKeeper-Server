@@ -1,6 +1,6 @@
+name: FinancialRecord-Backend
 services:
   FinancialRecord-Backend:
-    name: FinancialRecord-Backend
     image: registry.gitlab.com/financialrecord/backend
     ports:
       - 4000:4000
