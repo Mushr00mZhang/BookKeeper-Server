@@ -1,4 +1,4 @@
-name: FinancialRecord-Backend
+name: financialrecord-backend
 services:
   FinancialRecord-Backend:
     image: registry.gitlab.com/financialrecord/backend
