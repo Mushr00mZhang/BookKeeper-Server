@@ -6,8 +6,8 @@ services:
     volumes:
       - /app/FinancialRecord/FinancialRecord.db:/app/FinancialRecord.db
     networks:
-      - app
+      - default
 networks:
-  app:
-    name: main_app
+  default:
+    name: app
     external: true
