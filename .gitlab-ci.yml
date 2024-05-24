@@ -18,14 +18,13 @@ build:
         docker tag "$DOCKER_IMAGE_NAME" "$CI_REGISTRY_IMAGE:latest"
         docker push "$CI_REGISTRY_IMAGE:latest"
       fi
-  only:
-    changes:
-      - /**/**/*.go
-      - Dockerfile
   # Run this job in a branch where a Dockerfile exists
   rules:
     - if: $CI_COMMIT_BRANCH
       exists:
+        - Dockerfile
+      changes:
+        - **/**/*.go
         - Dockerfile
 deploy:
   image: docker:cli
